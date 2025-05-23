@@ -17,9 +17,9 @@ class PermissionAdapter(
             itemBinding.permissionStatus.text = if (item.isGranted) "Granted" else "Denied"
             itemBinding.permissionStatus.setTextColor(
                 if (item.isGranted) {
-                    itemView.context.getColor(android.R.color.holo_green_dark)
+                    itemBinding.root.context.getColor(android.R.color.holo_green_dark)
                 } else {
-                    itemView.context.getColor(android.R.color.holo_red_dark)
+                    itemBinding.root.context.getColor(android.R.color.holo_red_dark)
                 }
             )
         }

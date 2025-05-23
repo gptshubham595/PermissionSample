@@ -10,6 +10,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.shubham.permissions.databinding.FragmentPermissionBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,7 +23,7 @@ class PermissionFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    private lateinit var viewModel: PermissionViewModel
+    private val viewModel: PermissionViewModel by viewModels()
     private lateinit var adapter: PermissionAdapter
     private lateinit var launcher: ActivityResultLauncher<String>
 
